@@ -1,0 +1,1806 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>IT Practice Lab — Introduction to IT</title>
+  <style>
+    :root{--navy:#06254a;--blue:#1769e0;--lime:#b7ee47;--ink:#10233f;--muted:#68758a;--paper:#f3f6f8;--line:#dce2e9;--green:#15805d;--red:#c33b4a}*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif}button,select,textarea{font:inherit}button{cursor:pointer}.top{min-height:74px;background:var(--navy);color:#fff;padding:0 4vw;display:flex;align-items:center;gap:28px;position:sticky;top:0;z-index:5;box-shadow:0 8px 24px #06254a24}.brand{display:flex;gap:11px;align-items:center;margin-right:auto}.mark{width:39px;height:39px;border-radius:12px;background:var(--lime);color:var(--navy);font-weight:900;display:grid;place-items:center}.brand strong,.brand small{display:block}.brand small{color:#9fb3ca;font-size:10px;margin-top:3px}.nav{display:flex;align-self:stretch}.nav button{color:#aebed1;background:transparent;border:0;padding:0 16px;position:relative}.nav button:hover,.nav button.active{color:#fff}.nav button.active:after{content:"";position:absolute;left:15px;right:15px;bottom:0;height:3px;background:var(--lime)}.pill{border:1px solid #ffffff2a;border-radius:99px;padding:9px 13px;font-size:11px}.page{width:min(1200px,92vw);margin:auto;padding:42px 0 70px}.grid{display:grid;grid-template-columns:1.3fr 1fr .7fr;gap:18px}.card{background:#fff;border:1px solid var(--line);border-radius:22px}.hero{background:var(--navy);color:#fff;padding:42px;min-height:405px;position:relative;overflow:hidden}.hero:after{content:"";position:absolute;width:290px;height:290px;border:70px solid #b7ee471d;border-radius:50%;right:-120px;top:-120px}.eyebrow{font-size:10px;letter-spacing:.14em;text-transform:uppercase;font-weight:900;color:var(--blue)}.hero .eyebrow{color:var(--lime)}.hero h1{font-size:clamp(38px,4vw,56px);line-height:.98;letter-spacing:-.055em;margin:20px 0}.hero p{color:#bdd0e6;line-height:1.65;max-width:580px;font-size:14px}.stats{display:flex;gap:35px;position:absolute;left:42px;bottom:36px;z-index:1}.stats div{display:grid}.stats strong{font-size:21px}.stats span{color:#91a7c1;font-size:10px}.setup,.progress{padding:27px}.heading{display:flex;gap:10px;align-items:center}.badge{width:34px;height:34px;background:var(--lime);border-radius:10px;font-size:10px;font-weight:900;display:grid;place-items:center}.heading h2{font-size:17px;margin:0}.sub{color:var(--muted);font-size:12px;line-height:1.5;margin:9px 0 20px 44px}.setup label{display:grid;gap:6px;color:var(--muted);font-size:10px;font-weight:800;margin:14px 0}.setup select{width:100%;border:1px solid var(--line);border-radius:11px;padding:11px;background:#fbfcfd;color:var(--ink)}.split{display:grid;grid-template-columns:.8fr 1.2fr;gap:10px}.note{font-size:10px;color:var(--green);font-weight:800;margin:15px 0 11px}.primary{border:0;background:var(--blue);color:#fff;padding:13px 16px;border-radius:11px;font-weight:800}.setup .primary{width:100%;display:flex;justify-content:space-between}.primary:hover{background:#075dce}.primary:disabled{opacity:.45;cursor:not-allowed}.ring{--p:0deg;width:128px;height:128px;border-radius:50%;margin:30px auto 22px;background:conic-gradient(var(--blue) var(--p),#e7edf3 0);display:grid;place-items:center;position:relative}.ring:after{content:"";position:absolute;inset:13px;border-radius:50%;background:#fff}.ring span{z-index:1;text-align:center}.ring strong,.ring small{display:block}.ring strong{font-size:27px}.ring small{font-size:9px;color:var(--muted)}.minis{display:grid;grid-template-columns:repeat(3,1fr);padding:16px 0;border-block:1px solid var(--line);text-align:center}.minis div{display:grid}.minis div+div{border-left:1px solid var(--line)}.minis span{font-size:9px;color:var(--muted)}.sections{grid-column:1/-1;display:grid;grid-template-columns:repeat(3,1fr);overflow:hidden}.sections button{border:0;background:#fff;padding:21px;text-align:left;display:flex;gap:13px;color:var(--ink)}.sections button+button{border-left:1px solid var(--line)}.sections b{font-size:11px;background:#eaf2ff;color:var(--blue);padding:9px;border-radius:9px}.sections strong,.sections small{display:block}.sections strong{font-size:12px}.sections small{font-size:9px;color:var(--muted);margin-top:4px}.quiz{max-width:960px}.quizbar{display:flex;justify-content:space-between;align-items:end;margin-bottom:10px}.quizbar button{border:0;background:transparent;color:var(--blue);padding:0;font-weight:800}.quizbar span{display:block;color:var(--muted);font-size:10px;margin-top:5px}.track{height:5px;background:#dce3ea;border-radius:99px;margin-bottom:17px;overflow:hidden}.track i{display:block;height:100%;background:var(--lime)}.question{padding:35px 40px}.meta{display:flex;gap:10px;color:var(--muted);font-size:10px}.meta b{background:#eaf2ff;color:var(--blue);border-radius:99px;padding:5px 8px}.question h1{font-size:clamp(22px,3vw,29px);line-height:1.3;margin:20px 0 27px}.options{display:grid;gap:9px}.option{width:100%;border:1px solid var(--line);border-radius:12px;background:#fff;padding:12px 14px;text-align:left;display:flex;align-items:center;gap:13px;color:var(--ink)}.option:hover,.option.chosen{border-color:var(--blue);background:#eef5ff}.option>span{width:33px;height:33px;flex:0 0 33px;border:1px solid var(--line);border-radius:9px;display:grid;place-items:center;font-size:11px;font-weight:900}.option p{margin:0;font-size:13px;line-height:1.45}.option.correct{border-color:#68c09e;background:#effaf6}.option.wrong{border-color:#e2a0a8;background:#fff3f4}.feedback{margin-top:16px;padding:15px 17px;border-left:4px solid;border-radius:11px;font-size:12px;line-height:1.55}.feedback.good{background:#effaf6;border-color:var(--green)}.feedback.bad{background:#fff3f4;border-color:var(--red)}.qfoot{display:flex;justify-content:space-between;align-items:center;gap:15px;border-top:1px solid var(--line);padding-top:20px;margin-top:22px}.source{font-size:10px;color:var(--muted)}.source strong{display:block;color:var(--ink);margin-top:3px}.jump{display:flex;flex-wrap:wrap;justify-content:center;gap:5px;margin-top:15px}.jump button{width:29px;height:29px;border:1px solid var(--line);background:#fff;color:var(--muted);border-radius:8px;font-size:9px}.jump button.done{background:#eaf2ff;color:var(--blue)}.jump button.now{background:var(--navy);color:#fff}.title{margin-bottom:27px}.title h1{font-size:41px;letter-spacing:-.045em;margin:8px 0}.title p{color:var(--muted);line-height:1.6}.coverage{display:grid;gap:15px}.coverage section{overflow:hidden}.coverage header{background:var(--navy);color:#fff;padding:20px 23px}.coverage header h2{margin:0;font-size:16px}.coverage header p{margin:4px 0 0;color:#9fb3c9;font-size:10px}.units{display:grid;grid-template-columns:repeat(2,1fr)}.unit{border:0;border-top:1px solid var(--line);background:#fff;text-align:left;padding:16px 20px;color:var(--ink);display:flex;justify-content:space-between;gap:10px}.unit:nth-child(even){border-left:1px solid var(--line)}.unit strong,.unit small{display:block}.unit strong{font-size:11px}.unit small,.unit span{font-size:9px;color:var(--muted);margin-top:3px}.import{padding:30px;max-width:880px}.format{background:#f0f4f8;border-radius:10px;padding:10px 12px;font-size:11px;margin:16px 0}.import textarea{width:100%;min-height:250px;border:1px solid var(--line);border-radius:12px;padding:15px;line-height:1.6}.importfoot{display:flex;align-items:center;justify-content:space-between;gap:15px;margin-top:12px}.importfoot span{color:var(--muted);font-size:10px}.result{text-align:center;background:var(--navy);color:#fff;padding:42px}.result h1{font-size:62px;margin:10px 0 0}.result p{color:#b8c9dd}.review{padding:28px;margin-top:16px}.review article{border-top:1px solid var(--line);padding:18px 0}.review article h3{font-size:14px}.review article p{font-size:12px;color:var(--muted);line-height:1.5}.empty{padding:25px;background:#effaf6;color:var(--green);text-align:center;border-radius:12px}@media(max-width:900px){.grid{grid-template-columns:1fr 1fr}.hero{grid-column:1/-1}.sections{grid-template-columns:1fr}.sections button+button{border-left:0;border-top:1px solid var(--line)}.pill{display:none}}@media(max-width:650px){.top{padding:12px 15px 0;flex-wrap:wrap}.brand{flex:1}.nav{order:3;width:100%;height:44px}.nav button{flex:1}.page{padding-top:24px}.grid{grid-template-columns:1fr}.hero{min-height:450px;padding:28px 24px}.stats{left:24px;right:24px;bottom:25px;gap:10px;justify-content:space-between}.sections{grid-column:auto}.question{padding:24px 19px}.qfoot,.importfoot{align-items:stretch;flex-direction:column}.units{grid-template-columns:1fr}.unit:nth-child(even){border-left:0}}
+  </style>
+</head>
+<body>
+  <header class="top"><div class="brand"><span class="mark">IT</span><span><strong>Practice Lab</strong><small>Introduction to IT · E004</small></span></div><nav class="nav"><button data-view="dashboard" class="active">Practice</button><button data-view="coverage">Coverage</button><button data-view="library">Add course</button></nav><div class="pill" id="bankCount"></div></header>
+  <main id="app"></main>
+  <script>
+    const builtInConcepts = [
+  {
+    "id": "c001",
+    "section": "Section 1: Areas of IT",
+    "unit": "Unit 1.1: Introduction to IT",
+    "term": "Data",
+    "definition": "comprises raw facts and figures that have not undergone any processing or analysis. It acts as the input fed into a computer system for storage and use."
+  },
+  {
+    "id": "c002",
+    "section": "Section 1: Areas of IT",
+    "unit": "Unit 1.1: Introduction to IT",
+    "term": "Information",
+    "definition": "represents the output resulting from analyzing and interpreting data. It is the processed data that has been structured, organized, and presented in a meaningful way to offer insights and assist decision-making."
+  },
+  {
+    "id": "c003",
+    "section": "Section 1: Areas of IT",
+    "unit": "Unit 1.1: Introduction to IT",
+    "term": "application",
+    "definition": "a program designed to help users perform particular tasks such as word processing, data analysis, or communication"
+  },
+  {
+    "id": "c004",
+    "section": "Section 1: Areas of IT",
+    "unit": "Unit 1.1: Introduction to IT",
+    "term": "cybersecurity",
+    "definition": "the practice of protecting IT systems, networks, and data from unauthorized access, cyberthreats, and attacks"
+  },
+  {
+    "id": "c005",
+    "section": "Section 1: Areas of IT",
+    "unit": "Unit 1.1: Introduction to IT",
+    "term": "database",
+    "definition": "an organized collection of structured data that allows for efficient storage, retrieval, and management of information"
+  },
+  {
+    "id": "c006",
+    "section": "Section 1: Areas of IT",
+    "unit": "Unit 1.1: Introduction to IT",
+    "term": "hardware",
+    "definition": "physical components of a computer system, such as processors, memory, storage devices, and networking equipment"
+  },
+  {
+    "id": "c007",
+    "section": "Section 1: Areas of IT",
+    "unit": "Unit 1.1: Introduction to IT",
+    "term": "information technology (IT)",
+    "definition": "broad field encompassing hardware, software, networks, and systems that manage and process data to support business operations"
+  },
+  {
+    "id": "c008",
+    "section": "Section 1: Areas of IT",
+    "unit": "Unit 1.1: Introduction to IT",
+    "term": "IT systems",
+    "definition": "integrated sets of hardware, software, and networks that facilitate business processes, communication, and data management"
+  },
+  {
+    "id": "c009",
+    "section": "Section 1: Areas of IT",
+    "unit": "Unit 1.1: Introduction to IT",
+    "term": "network",
+    "definition": "a system of interconnected computers and devices that enable communication and data sharing"
+  },
+  {
+    "id": "c010",
+    "section": "Section 1: Areas of IT",
+    "unit": "Unit 1.1: Introduction to IT",
+    "term": "operating system (OS)",
+    "definition": "core software that manages a computer's hardware and provides an interface for users and applications"
+  },
+  {
+    "id": "c011",
+    "section": "Section 1: Areas of IT",
+    "unit": "Unit 1.1: Introduction to IT",
+    "term": "software",
+    "definition": "a set of programs and related data that provide instructions for hardware to operate and perform functions"
+  },
+  {
+    "id": "c012",
+    "section": "Section 1: Areas of IT",
+    "unit": "Unit 1.2: Areas of IT",
+    "term": "Networking and communication",
+    "definition": "focuses on the infrastructure that allows computers to communicate with each other. IT professionals in this area design, implement, and maintain network systems—including routers, switches, and firewalls—to ensure seamless communication between devices."
+  },
+  {
+    "id": "c013",
+    "section": "Section 1: Areas of IT",
+    "unit": "Unit 1.2: Areas of IT",
+    "term": "Database management",
+    "definition": "involves organizing and maintaining data in databases. IT professionals specializing in database management design and implement database systems, ensure data integrity and security, and optimize database performance."
+  },
+  {
+    "id": "c014",
+    "section": "Section 1: Areas of IT",
+    "unit": "Unit 1.2: Areas of IT",
+    "term": "Cybersecurity and information assurance",
+    "definition": "are critical areas of IT that focus on protecting digital assets from cyberthreats. IT professionals in cybersecurity implement security measures—such as firewalls, encryption, and intrusion detection systems—to safeguard networks, systems, and data from unauthorized access and attacks."
+  },
+  {
+    "id": "c015",
+    "section": "Section 1: Areas of IT",
+    "unit": "Unit 1.2: Areas of IT",
+    "term": "Cloud computing",
+    "definition": "involves delivering computing services over the internet. IT professionals in cloud computing design, implement, and manage cloud-based solutions that allow organizations to scale their IT infrastructure on demand and ensure the security and availability of cloud-based applications."
+  },
+  {
+    "id": "c016",
+    "section": "Section 1: Areas of IT",
+    "unit": "Unit 1.2: Areas of IT",
+    "term": "Artificial intelligence (AI) and data analytics",
+    "definition": "focus on extracting insights and patterns from large datasets. IT professionals in this area use AI algorithms and data analytics tools to analyze data, identify trends, and make informed business decisions."
+  },
+  {
+    "id": "c017",
+    "section": "Section 1: Areas of IT",
+    "unit": "Unit 1.2: Areas of IT",
+    "term": "IT support and help desk",
+    "definition": "professionals provide technical assistance and troubleshooting to end users experiencing IT issues. They offer support for hardware, software, and network-related problems to ensure IT systems operate smoothly."
+  },
+  {
+    "id": "c018",
+    "section": "Section 1: Areas of IT",
+    "unit": "Unit 1.2: Areas of IT",
+    "term": "IT governance and management",
+    "definition": "involves overseeing IT operations, policies, and strategies. IT professionals in governance and management ensure IT resources are used effectively, align IT initiatives with business goals, and comply with regulatory requirements."
+  },
+  {
+    "id": "c019",
+    "section": "Section 1: Areas of IT",
+    "unit": "Unit 1.2: Areas of IT",
+    "term": "artificial intelligence (AI)",
+    "definition": "technology that enables computers to simulate human intelligence and learning"
+  },
+  {
+    "id": "c020",
+    "section": "Section 1: Areas of IT",
+    "unit": "Unit 1.2: Areas of IT",
+    "term": "data analytics",
+    "definition": "the process of examining datasets to conclude the information they contain"
+  },
+  {
+    "id": "c021",
+    "section": "Section 1: Areas of IT",
+    "unit": "Unit 1.2: Areas of IT",
+    "term": "information assurance",
+    "definition": "measures to protect and defend information systems by ensuring availability, integrity, and confidentiality"
+  },
+  {
+    "id": "c022",
+    "section": "Section 1: Areas of IT",
+    "unit": "Unit 1.2: Areas of IT",
+    "term": "IT governance",
+    "definition": "a framework for managing IT operations and investments to support organizational goals"
+  },
+  {
+    "id": "c023",
+    "section": "Section 1: Areas of IT",
+    "unit": "Unit 1.2: Areas of IT",
+    "term": "networking",
+    "definition": "the practice of connecting computers and devices to share resources and communicate"
+  },
+  {
+    "id": "c024",
+    "section": "Section 1: Areas of IT",
+    "unit": "Unit 2.1: How IT Supports Business",
+    "term": "business process",
+    "definition": "a sequence of activities that achieve a specific organizational goal"
+  },
+  {
+    "id": "c025",
+    "section": "Section 1: Areas of IT",
+    "unit": "Unit 2.1: How IT Supports Business",
+    "term": "customer relationship management (CRM)",
+    "definition": "systems for managing all company interactions with current and potential customers"
+  },
+  {
+    "id": "c026",
+    "section": "Section 1: Areas of IT",
+    "unit": "Unit 2.1: How IT Supports Business",
+    "term": "enterprise resource planning (ERP)",
+    "definition": "the integrated management of main business processes, often in real time"
+  },
+  {
+    "id": "c027",
+    "section": "Section 1: Areas of IT",
+    "unit": "Unit 2.1: How IT Supports Business",
+    "term": "human resource management (HRM)",
+    "definition": "the process of managing a company's workforce, including recruiting, hiring, training, and supporting employees"
+  },
+  {
+    "id": "c028",
+    "section": "Section 1: Areas of IT",
+    "unit": "Unit 2.1: How IT Supports Business",
+    "term": "supply chain management (SCM)",
+    "definition": "the process of managing the flow of goods and services, from raw materials to the final product delivered to the customer"
+  },
+  {
+    "id": "c029",
+    "section": "Section 1: Areas of IT",
+    "unit": "Unit 2.2: IT's Role in Business Segments",
+    "term": "Transportation Management Software",
+    "definition": "helps companies plan, track, and optimize the movement of goods. IT teams maintain the software, integrate it with mapping tools and scanners, and ensure that shipment data is accurate. This allows logistics companies to choose the best shipping routes, monitor deliveries, and manage fuel and labor costs. As a result, products reach customers faster and more efficiently."
+  },
+  {
+    "id": "c030",
+    "section": "Section 1: Areas of IT",
+    "unit": "Unit 2.2: IT's Role in Business Segments",
+    "term": "Learning Management Systems (LMS)",
+    "definition": "allow instructors to deliver course materials, track student progress, and manage online or hybrid learning. IT supports these systems by maintaining servers, ensuring course content loads properly, and troubleshooting login or software issues. This enables students to access learning resources anytime and from anywhere. LMS platforms help schools and universities provide flexible and organized learning experiences."
+  },
+  {
+    "id": "c031",
+    "section": "Section 1: Areas of IT",
+    "unit": "Unit 2.2: IT's Role in Business Segments",
+    "term": "Point-of-sale (POS)",
+    "definition": "systems handle sales transactions, process payments, and update inventory in real time. IT professionals set up and maintain these systems, ensuring devices like scanners, receipt printers, and card readers stay connected. A reliable POS system helps retail businesses serve customers quickly and accurately. It also supports data collection that helps managers track sales trends and plan inventory."
+  },
+  {
+    "id": "c032",
+    "section": "Section 1: Areas of IT",
+    "unit": "Unit 2.2: IT's Role in Business Segments",
+    "term": "one",
+    "definition": "of the following systems and explain how it could help the company operate more efficiently:"
+  },
+  {
+    "id": "c033",
+    "section": "Section 1: Areas of IT",
+    "unit": "Unit 2.2: IT's Role in Business Segments",
+    "term": "electronic health record (EHR)",
+    "definition": "a digital version of a patient's medical history, maintained over time"
+  },
+  {
+    "id": "c034",
+    "section": "Section 1: Areas of IT",
+    "unit": "Unit 2.2: IT's Role in Business Segments",
+    "term": "learning management system (LMS)",
+    "definition": "software for administering, documenting, and delivering educational courses"
+  },
+  {
+    "id": "c035",
+    "section": "Section 1: Areas of IT",
+    "unit": "Unit 3.1: Organizational Structures and Information Technology",
+    "term": "organizational structure",
+    "definition": "shows how tasks and responsibilities are shared in a company. It helps teams communicate and work together to reach goals. The"
+  },
+  {
+    "id": "c036",
+    "section": "Section 1: Areas of IT",
+    "unit": "Unit 3.1: Organizational Structures and Information Technology",
+    "term": "organizational chart",
+    "definition": "is a helpful tool for this, as it visually shows who reports to whom and how teams are connected."
+  },
+  {
+    "id": "c037",
+    "section": "Section 1: Areas of IT",
+    "unit": "Unit 3.1: Organizational Structures and Information Technology",
+    "term": "reporting relationship",
+    "definition": "s. The chain of command helps streamline decision-making and aligns responsibilities with the appropriate level of authority. In this example, an IT support specialist reports to an IT manager, who reports to the CEO."
+  },
+  {
+    "id": "c038",
+    "section": "Section 1: Areas of IT",
+    "unit": "Unit 3.1: Organizational Structures and Information Technology",
+    "term": "agile model",
+    "definition": "organizational approach emphasizing flexibility, iteration, and rapid response to change"
+  },
+  {
+    "id": "c039",
+    "section": "Section 1: Areas of IT",
+    "unit": "Unit 3.1: Organizational Structures and Information Technology",
+    "term": "chain of command",
+    "definition": "the line of authority extending from top to bottom of an organization"
+  },
+  {
+    "id": "c040",
+    "section": "Section 1: Areas of IT",
+    "unit": "Unit 3.1: Organizational Structures and Information Technology",
+    "term": "cross-functional team",
+    "definition": "a group composed of members from different functional areas"
+  },
+  {
+    "id": "c041",
+    "section": "Section 1: Areas of IT",
+    "unit": "Unit 3.1: Organizational Structures and Information Technology",
+    "term": "flat structure",
+    "definition": "an organization with few or no levels of middle management between staff and executives"
+  },
+  {
+    "id": "c042",
+    "section": "Section 1: Areas of IT",
+    "unit": "Unit 3.1: Organizational Structures and Information Technology",
+    "term": "functional structure",
+    "definition": "an organization divided into departments based on specialized functions"
+  },
+  {
+    "id": "c043",
+    "section": "Section 1: Areas of IT",
+    "unit": "Unit 3.1: Organizational Structures and Information Technology",
+    "term": "hierarchical structure",
+    "definition": "a traditional pyramid-shaped organization with clear levels of authority"
+  },
+  {
+    "id": "c044",
+    "section": "Section 1: Areas of IT",
+    "unit": "Unit 3.1: Organizational Structures and Information Technology",
+    "term": "matrix structure",
+    "definition": "an organization where employees report to two managers (e.g., functional and project)"
+  },
+  {
+    "id": "c045",
+    "section": "Section 1: Areas of IT",
+    "unit": "Unit 3.1: Organizational Structures and Information Technology",
+    "term": "span of control",
+    "definition": "the number of subordinates a manager directly oversees"
+  },
+  {
+    "id": "c046",
+    "section": "Section 1: Areas of IT",
+    "unit": "Unit 3.2: Leadership and Management in IT",
+    "term": "Strategic decisions",
+    "definition": "are long-term choices made by executives and directors that set the overall direction of the organization (e.g., deciding to move the company to cloud-based systems)."
+  },
+  {
+    "id": "c047",
+    "section": "Section 1: Areas of IT",
+    "unit": "Unit 3.2: Leadership and Management in IT",
+    "term": "Tactical decisions",
+    "definition": "are shorter-term actions that put those strategies into practice (e.g., selecting which cloud provider to use and planning the migration process)."
+  },
+  {
+    "id": "c048",
+    "section": "Section 1: Areas of IT",
+    "unit": "Unit 3.2: Leadership and Management in IT",
+    "term": "chief artificial intelligence officer (CAIO)",
+    "definition": "the executive leading AI strategy and implementation"
+  },
+  {
+    "id": "c049",
+    "section": "Section 1: Areas of IT",
+    "unit": "Unit 3.2: Leadership and Management in IT",
+    "term": "chief data officer (CDO)",
+    "definition": "the executive overseeing data strategy, governance, and analytics"
+  },
+  {
+    "id": "c050",
+    "section": "Section 1: Areas of IT",
+    "unit": "Unit 3.2: Leadership and Management in IT",
+    "term": "chief information officer (CIO)",
+    "definition": "the executive responsible for IT strategy and alignment with business goals"
+  },
+  {
+    "id": "c051",
+    "section": "Section 1: Areas of IT",
+    "unit": "Unit 3.2: Leadership and Management in IT",
+    "term": "chief security officer (CSO)",
+    "definition": "the executive responsible for the organization's security strategy and implementation"
+  },
+  {
+    "id": "c052",
+    "section": "Section 1: Areas of IT",
+    "unit": "Unit 3.2: Leadership and Management in IT",
+    "term": "chief technology officer (CTO)",
+    "definition": "the executive focused on technological innovation and infrastructure"
+  },
+  {
+    "id": "c053",
+    "section": "Section 1: Areas of IT",
+    "unit": "Unit 3.2: Leadership and Management in IT",
+    "term": "IT director",
+    "definition": "a senior manager overseeing specific IT functions or departments"
+  },
+  {
+    "id": "c054",
+    "section": "Section 1: Areas of IT",
+    "unit": "Unit 3.2: Leadership and Management in IT",
+    "term": "IT manager",
+    "definition": "a middle manager who oversees specific IT teams or projects, ensuring that strategies are turned into practical tasks and operations"
+  },
+  {
+    "id": "c055",
+    "section": "Section 1: Areas of IT",
+    "unit": "Unit 3.2: Leadership and Management in IT",
+    "term": "first-line manager",
+    "definition": "the supervisor directly overseeing day-to-day operations and staff"
+  },
+  {
+    "id": "c056",
+    "section": "Section 1: Areas of IT",
+    "unit": "Unit 3.2: Leadership and Management in IT",
+    "term": "middle manager",
+    "definition": "the leader who implements strategies and manages operational teams"
+  },
+  {
+    "id": "c057",
+    "section": "Section 1: Areas of IT",
+    "unit": "Unit 3.2: Leadership and Management in IT",
+    "term": "product manager",
+    "definition": "a leader responsible for specific technology product development"
+  },
+  {
+    "id": "c058",
+    "section": "Section 1: Areas of IT",
+    "unit": "Unit 3.2: Leadership and Management in IT",
+    "term": "project manager",
+    "definition": "a professional coordinating specific IT initiatives and deliverables"
+  },
+  {
+    "id": "c059",
+    "section": "Section 1: Areas of IT",
+    "unit": "Unit 3.2: Leadership and Management in IT",
+    "term": "team lead",
+    "definition": "a technical supervisor guiding specific development or support teams"
+  },
+  {
+    "id": "c060",
+    "section": "Section 1: Areas of IT",
+    "unit": "Unit 3.2: Leadership and Management in IT",
+    "term": "top-level manager",
+    "definition": "the executive responsible for organization-wide strategy and decision-making"
+  },
+  {
+    "id": "c061",
+    "section": "Section 1: Areas of IT",
+    "unit": "Unit 3.3: Roles of IT Personnel",
+    "term": "IT Software, Databases, and Cloud Computing",
+    "definition": "Review the following table of IT roles and responsibilities in software, databases, and cloud computing. As you read about these positions, think about whether this area of IT interests you. If so, visit the"
+  },
+  {
+    "id": "c062",
+    "section": "Section 1: Areas of IT",
+    "unit": "Unit 3.3: Roles of IT Personnel",
+    "term": "Outsourcing",
+    "definition": "refers to when a company hires external vendors to handle certain IT functions, such as cloud computing or software development, instead of performing them internally. For example, a company might outsource its IT support services to a third-party vendor to reduce costs or access specialized expertise."
+  },
+  {
+    "id": "c063",
+    "section": "Section 1: Areas of IT",
+    "unit": "Unit 3.3: Roles of IT Personnel",
+    "term": "Insourcing",
+    "definition": "is when a company handles IT functions internally, building its own infrastructure, hiring staff, and maintaining control over the operations. For instance, a large tech firm may build its own in-house cloud services rather than rely on a third-party provider."
+  },
+  {
+    "id": "c064",
+    "section": "Section 1: Areas of IT",
+    "unit": "Unit 3.3: Roles of IT Personnel",
+    "term": "analyst",
+    "definition": "a professional who evaluates business needs and recommends technology solutions"
+  },
+  {
+    "id": "c065",
+    "section": "Section 1: Areas of IT",
+    "unit": "Unit 3.3: Roles of IT Personnel",
+    "term": "engineer",
+    "definition": "a professional who designs and builds technology solutions"
+  },
+  {
+    "id": "c066",
+    "section": "Section 1: Areas of IT",
+    "unit": "Unit 3.3: Roles of IT Personnel",
+    "term": "IT support",
+    "definition": "a specialist who provides first-line technical support to users"
+  },
+  {
+    "id": "c067",
+    "section": "Section 1: Areas of IT",
+    "unit": "Unit 3.3: Roles of IT Personnel",
+    "term": "network engineer",
+    "definition": "an expert who designs and maintains computer networks"
+  },
+  {
+    "id": "c068",
+    "section": "Section 1: Areas of IT",
+    "unit": "Unit 3.3: Roles of IT Personnel",
+    "term": "software engineer",
+    "definition": "a specialist who develops and maintains software applications"
+  },
+  {
+    "id": "c069",
+    "section": "Section 1: Areas of IT",
+    "unit": "Unit 3.3: Roles of IT Personnel",
+    "term": "systems analyst",
+    "definition": "an expert who designs and implements information systems solutions"
+  },
+  {
+    "id": "c070",
+    "section": "Section 1: Areas of IT",
+    "unit": "Unit 3.3: Roles of IT Personnel",
+    "term": "technician",
+    "definition": "a professional who provides hands-on technical support and maintenance"
+  },
+  {
+    "id": "c071",
+    "section": "Section 1: Areas of IT",
+    "unit": "Section 1: Summary",
+    "term": "business analyst",
+    "definition": "a specialist who bridges the gap between business needs and IT capabilities"
+  },
+  {
+    "id": "c072",
+    "section": "Section 1: Areas of IT",
+    "unit": "Section 1: Summary",
+    "term": "database analyst",
+    "definition": "a professional who manages and optimizes database systems"
+  },
+  {
+    "id": "c073",
+    "section": "Section 1: Areas of IT",
+    "unit": "Section 1: Summary",
+    "term": "decentralized structure",
+    "definition": "an organization where decision-making authority is distributed across various levels"
+  },
+  {
+    "id": "c074",
+    "section": "Section 1: Areas of IT",
+    "unit": "Section 1: Summary",
+    "term": "line manager",
+    "definition": "the supervisor directly overseeing day-to-day operations and staff"
+  },
+  {
+    "id": "c075",
+    "section": "Section 1: Areas of IT",
+    "unit": "Section 1: Summary",
+    "term": "project-based structure",
+    "definition": "an organization where teams are formed around specific projects or initiatives"
+  },
+  {
+    "id": "c076",
+    "section": "Section 1: Areas of IT",
+    "unit": "Section 1: Summary",
+    "term": "security analyst",
+    "definition": "a specialist who protects systems and data from cyber threats"
+  },
+  {
+    "id": "c077",
+    "section": "Section 1: Areas of IT",
+    "unit": "Section 1: Summary",
+    "term": "security engineer",
+    "definition": "a specialist who implements cybersecurity measures"
+  },
+  {
+    "id": "c078",
+    "section": "Section 2: Technology Infrastructure and Security",
+    "unit": "Unit 1.1: Technology Infrastructure",
+    "term": "IT processes",
+    "definition": "all play essential roles in ensuring efficient and secure technology operations."
+  },
+  {
+    "id": "c079",
+    "section": "Section 2: Technology Infrastructure and Security",
+    "unit": "Unit 1.1: Technology Infrastructure",
+    "term": "On-premises infrastructure",
+    "definition": "Physical hardware, such as PCs, workstations, and servers, is housed and maintained within an organization. It provides full control and security but requires high up-front costs and ongoing maintenance."
+  },
+  {
+    "id": "c080",
+    "section": "Section 2: Technology Infrastructure and Security",
+    "unit": "Unit 1.1: Technology Infrastructure",
+    "term": "Cloud computing: Computing resources,",
+    "definition": "including storage and processing power, are hosted remotely and accessed via the internet. Cloud solutions offer scalability, cost efficiency, and remote accessibility but depend on internet connectivity and third-party providers."
+  },
+  {
+    "id": "c081",
+    "section": "Section 2: Technology Infrastructure and Security",
+    "unit": "Unit 1.1: Technology Infrastructure",
+    "term": "cloud",
+    "definition": "internet-based services that provide storage, computing power, and applications without requiring physical hardware on-site"
+  },
+  {
+    "id": "c082",
+    "section": "Section 2: Technology Infrastructure and Security",
+    "unit": "Unit 1.1: Technology Infrastructure",
+    "term": "databases",
+    "definition": "organized collections of data that store, manage, and retrieve information efficiently"
+  },
+  {
+    "id": "c083",
+    "section": "Section 2: Technology Infrastructure and Security",
+    "unit": "Unit 1.1: Technology Infrastructure",
+    "term": "networks",
+    "definition": "systems that connect computers, devices, and servers, allowing them to communicate and share data"
+  },
+  {
+    "id": "c084",
+    "section": "Section 2: Technology Infrastructure and Security",
+    "unit": "Unit 1.1: Technology Infrastructure",
+    "term": "on-premises IT infrastructure",
+    "definition": "a setup where an organization owns, manages, and maintains its hardware (such as servers, storage, and networking equipment) and software within its own physical facilities"
+  },
+  {
+    "id": "c085",
+    "section": "Section 2: Technology Infrastructure and Security",
+    "unit": "Unit 1.2: Classes of Computers",
+    "term": "Single-user computers",
+    "definition": "include portable devices like laptops and tablets as well as nonportable desktop personal computers (PCs) and workstations for personal or professional use."
+  },
+  {
+    "id": "c086",
+    "section": "Section 2: Technology Infrastructure and Security",
+    "unit": "Unit 1.2: Classes of Computers",
+    "term": "Servers",
+    "definition": "manage data and applications for multiple users, while"
+  },
+  {
+    "id": "c087",
+    "section": "Section 2: Technology Infrastructure and Security",
+    "unit": "Unit 1.2: Classes of Computers",
+    "term": "mainframes",
+    "definition": "handle large-scale business processing."
+  },
+  {
+    "id": "c088",
+    "section": "Section 2: Technology Infrastructure and Security",
+    "unit": "Unit 1.2: Classes of Computers",
+    "term": "Supercomputers",
+    "definition": "perform complex scientific calculations, and"
+  },
+  {
+    "id": "c089",
+    "section": "Section 2: Technology Infrastructure and Security",
+    "unit": "Unit 1.2: Classes of Computers",
+    "term": "quantum computers",
+    "definition": "push the limits of computing with advanced problem-solving capabilities. As the capabilities of a computer improves, so does the cost."
+  },
+  {
+    "id": "c090",
+    "section": "Section 2: Technology Infrastructure and Security",
+    "unit": "Unit 1.2: Classes of Computers",
+    "term": "single-user computer",
+    "definition": "a desktop computer or workstation designed for one person to use at a time"
+  },
+  {
+    "id": "c091",
+    "section": "Section 2: Technology Infrastructure and Security",
+    "unit": "Unit 1.3: Computer Hardware Components",
+    "term": "Input devices",
+    "definition": "such as keyboards, mice, and scanners that allow users to send data into the system."
+  },
+  {
+    "id": "c092",
+    "section": "Section 2: Technology Infrastructure and Security",
+    "unit": "Unit 1.3: Computer Hardware Components",
+    "term": "Output devices",
+    "definition": "like monitors, speakers, and printers that deliver processed information back to the user."
+  },
+  {
+    "id": "c093",
+    "section": "Section 2: Technology Infrastructure and Security",
+    "unit": "Unit 1.3: Computer Hardware Components",
+    "term": "cache",
+    "definition": "a small, high-speed storage component that temporarily stores frequently accessed data so that future requests for that data can be served faster"
+  },
+  {
+    "id": "c094",
+    "section": "Section 2: Technology Infrastructure and Security",
+    "unit": "Unit 1.3: Computer Hardware Components",
+    "term": "central processing unit (CPU)",
+    "definition": "the part of the computer that carries out instructions, performs calculations, and controls how data moves within the system"
+  },
+  {
+    "id": "c095",
+    "section": "Section 2: Technology Infrastructure and Security",
+    "unit": "Unit 1.3: Computer Hardware Components",
+    "term": "hard disk drive (HDD)",
+    "definition": "a storage device that uses spinning disks and a moving arm to read and write data"
+  },
+  {
+    "id": "c096",
+    "section": "Section 2: Technology Infrastructure and Security",
+    "unit": "Unit 1.3: Computer Hardware Components",
+    "term": "motherboard",
+    "definition": "the main circuit board that connects the CPU, memory, storage, and other parts, allowing them to communicate"
+  },
+  {
+    "id": "c097",
+    "section": "Section 2: Technology Infrastructure and Security",
+    "unit": "Unit 1.3: Computer Hardware Components",
+    "term": "random-access memory (RAM)",
+    "definition": "a temporary memory that stores data and instructions the CPU is currently using; clears when the computer is turned off"
+  },
+  {
+    "id": "c098",
+    "section": "Section 2: Technology Infrastructure and Security",
+    "unit": "Unit 1.3: Computer Hardware Components",
+    "term": "solid-state drive (SSD)",
+    "definition": "a faster type of storage that uses flash memory instead of spinning disks to store and access data"
+  },
+  {
+    "id": "c099",
+    "section": "Section 2: Technology Infrastructure and Security",
+    "unit": "Unit 1.3: Computer Hardware Components",
+    "term": "storage device",
+    "definition": "a part of the computer that saves data permanently, even when the power is off"
+  },
+  {
+    "id": "c100",
+    "section": "Section 2: Technology Infrastructure and Security",
+    "unit": "Unit 1.4: Computer Peripheral Devices",
+    "term": "Augmented reality (AR)",
+    "definition": "enhances the physical world by overlaying digital elements, such as images or data, onto real-world environments. This is typically achieved through devices like smartphones, tablets, or AR glasses. In contrast,"
+  },
+  {
+    "id": "c101",
+    "section": "Section 2: Technology Infrastructure and Security",
+    "unit": "Unit 1.4: Computer Peripheral Devices",
+    "term": "Virtual reality (VR)",
+    "definition": "immerses users in a fully simulated environment, completely separate from the physical world, using VR headsets that block out real-world sensory input. While AR adds to the existing environment, VR replaces it entirely."
+  },
+  {
+    "id": "c102",
+    "section": "Section 2: Technology Infrastructure and Security",
+    "unit": "Unit 1.4: Computer Peripheral Devices",
+    "term": "USB-A",
+    "definition": "a standard rectangular connector used for peripherals like keyboards, mice, and flash drives; supports moderate data transfer rates"
+  },
+  {
+    "id": "c103",
+    "section": "Section 2: Technology Infrastructure and Security",
+    "unit": "Unit 1.4: Computer Peripheral Devices",
+    "term": "Older USB standards",
+    "definition": "B, Micro-B, and many others common in older mobile devices and external hard drives; offers compact connectivity"
+  },
+  {
+    "id": "c104",
+    "section": "Section 2: Technology Infrastructure and Security",
+    "unit": "Unit 1.4: Computer Peripheral Devices",
+    "term": "USB-C",
+    "definition": "a versatile, reversible port supporting high-speed data transfer, power delivery, and video output for keyboards, mice, flash drives, cameras, displays, speakers, and more."
+  },
+  {
+    "id": "c105",
+    "section": "Section 2: Technology Infrastructure and Security",
+    "unit": "Unit 1.4: Computer Peripheral Devices",
+    "term": "HDMI",
+    "definition": "used for high-definition video and audio transmission between computers, monitors, and televisions"
+  },
+  {
+    "id": "c106",
+    "section": "Section 2: Technology Infrastructure and Security",
+    "unit": "Unit 1.4: Computer Peripheral Devices",
+    "term": "input device",
+    "definition": "a device that allows users to enter data and interact with a computer system, such as a keyboard, mouse, or touch screen"
+  },
+  {
+    "id": "c107",
+    "section": "Section 2: Technology Infrastructure and Security",
+    "unit": "Unit 1.4: Computer Peripheral Devices",
+    "term": "output device",
+    "definition": "a hardware component that conveys processed data from a computer to a user, such as a monitor, printer, or speaker"
+  },
+  {
+    "id": "c108",
+    "section": "Section 2: Technology Infrastructure and Security",
+    "unit": "Unit 2.1: Types of Software",
+    "term": "application software",
+    "definition": "programs designed for specific user tasks, such as word processing, web browsing, and gaming; examples include Microsoft Word, Google Chrome, and Adobe Photoshop"
+  },
+  {
+    "id": "c109",
+    "section": "Section 2: Technology Infrastructure and Security",
+    "unit": "Unit 2.1: Types of Software",
+    "term": "system software",
+    "definition": "the foundational software that manages a computer's hardware and provides a platform for other programs to run; includes the operating system (OS) and utility programs that keep the system running smoothly"
+  },
+  {
+    "id": "c110",
+    "section": "Section 2: Technology Infrastructure and Security",
+    "unit": "Unit 2.1: Types of Software",
+    "term": "utility program",
+    "definition": "specialized programs that help maintain, protect, and improve system performance; examples include antivirus software, disk cleanup tools, and backup programs"
+  },
+  {
+    "id": "c111",
+    "section": "Section 2: Technology Infrastructure and Security",
+    "unit": "Unit 2.2: Application Software",
+    "term": "Business software",
+    "definition": "facilitates various business functions such as accounting, project management, and customer relationship management. This type of software streamlines operations and enhances productivity."
+  },
+  {
+    "id": "c112",
+    "section": "Section 2: Technology Infrastructure and Security",
+    "unit": "Unit 2.2: Application Software",
+    "term": "Communication software",
+    "definition": "enables effective communication through email, video conferencing, and instant messaging, connecting individuals and teams across the globe."
+  },
+  {
+    "id": "c113",
+    "section": "Section 2: Technology Infrastructure and Security",
+    "unit": "Unit 2.2: Application Software",
+    "term": "Productivity software",
+    "definition": "assists in creating documents, spreadsheets, and presentations, boosting efficiency in both personal and professional settings."
+  },
+  {
+    "id": "c114",
+    "section": "Section 2: Technology Infrastructure and Security",
+    "unit": "Unit 2.2: Application Software",
+    "term": "Design software",
+    "definition": "provides tools for graphic design, video editing, and multimedia creation, allowing users to unleash their creativity and produce stunning visual content."
+  },
+  {
+    "id": "c115",
+    "section": "Section 2: Technology Infrastructure and Security",
+    "unit": "Unit 2.3: Programming Languages and Tools",
+    "term": "script",
+    "definition": "is a small, quick-to-write set of instructions that runs inside another program."
+  },
+  {
+    "id": "c116",
+    "section": "Section 2: Technology Infrastructure and Security",
+    "unit": "Unit 2.3: Programming Languages and Tools",
+    "term": "Challenges",
+    "definition": "Balanced customization"
+  },
+  {
+    "id": "c117",
+    "section": "Section 2: Technology Infrastructure and Security",
+    "unit": "Unit 2.3: Programming Languages and Tools",
+    "term": "compiler",
+    "definition": "converts high-level programming languages (e.g., C++) into machine code for computers to execute. In contrast, an interpreter processes code line by line in languages like Python. Understanding the differences between compiled and interpreted languages helps IT professionals select the right tools for their projects, improve productivity, and create efficient software."
+  },
+  {
+    "id": "c118",
+    "section": "Section 2: Technology Infrastructure and Security",
+    "unit": "Unit 2.3: Programming Languages and Tools",
+    "term": "build",
+    "definition": "a custom project management system,"
+  },
+  {
+    "id": "c119",
+    "section": "Section 2: Technology Infrastructure and Security",
+    "unit": "Unit 2.3: Programming Languages and Tools",
+    "term": "buy",
+    "definition": "an existing off-the-shelf solution, or use a"
+  },
+  {
+    "id": "c120",
+    "section": "Section 2: Technology Infrastructure and Security",
+    "unit": "Unit 2.3: Programming Languages and Tools",
+    "term": "hybrid approach",
+    "definition": "that involves customizing a pre-made tool. The IT team has basic experience with programming languages like Python and Java but has limited capacity to take on a large, long-term development project. Sparkit needs a recommendation that considers development time, cost, customization needs, and the team’s existing skill set."
+  },
+  {
+    "id": "c121",
+    "section": "Section 2: Technology Infrastructure and Security",
+    "unit": "Unit 2.3: Programming Languages and Tools",
+    "term": "building",
+    "definition": "a custom tool using a programming language like Python"
+  },
+  {
+    "id": "c122",
+    "section": "Section 2: Technology Infrastructure and Security",
+    "unit": "Unit 2.3: Programming Languages and Tools",
+    "term": "pre-built software solution",
+    "definition": "could meet most of Sparkit’s needs"
+  },
+  {
+    "id": "c123",
+    "section": "Section 2: Technology Infrastructure and Security",
+    "unit": "Unit 2.3: Programming Languages and Tools",
+    "term": "C++",
+    "definition": "a powerful programming language used to create fast programs, like video games and software, that run on computers"
+  },
+  {
+    "id": "c124",
+    "section": "Section 2: Technology Infrastructure and Security",
+    "unit": "Unit 2.3: Programming Languages and Tools",
+    "term": "integrated development environment (IDE)",
+    "definition": "a tool that helps programmers write, test, and fix their code all in one place; it is like a special workspace for coding"
+  },
+  {
+    "id": "c125",
+    "section": "Section 2: Technology Infrastructure and Security",
+    "unit": "Unit 2.3: Programming Languages and Tools",
+    "term": "Java",
+    "definition": "a programming language that works on many different types of computers; used to create apps, games, and websites"
+  },
+  {
+    "id": "c126",
+    "section": "Section 2: Technology Infrastructure and Security",
+    "unit": "Unit 2.3: Programming Languages and Tools",
+    "term": "Python",
+    "definition": "a popular and easy-to-learn programming language used for building websites, analyzing data, and more"
+  },
+  {
+    "id": "c127",
+    "section": "Section 2: Technology Infrastructure and Security",
+    "unit": "Unit 2.4: Software Development",
+    "term": "Software as a Service (SaaS)",
+    "definition": "is a cloud-based service where, instead of downloading software on your local machine, you access and use the software over the internet. Examples of SaaS include platforms like Google Workspace (Docs, Sheets, Gmail) and Microsoft 365 (Word, Excel, OneDrive). SaaS eliminates the need for maintaining complex IT infrastructure and software updates, as the provider manages everything."
+  },
+  {
+    "id": "c128",
+    "section": "Section 2: Technology Infrastructure and Security",
+    "unit": "Unit 2.4: Software Development",
+    "term": "software development life cycle (SDLC)",
+    "definition": "is a step-by-step approach that guides teams through the development of software, from initial concept to final testing. By following this process, businesses can create software that meets user needs, reduces errors, and remains secure."
+  },
+  {
+    "id": "c129",
+    "section": "Section 2: Technology Infrastructure and Security",
+    "unit": "Unit 2.4: Software Development",
+    "term": "Waterfall",
+    "definition": "is a structured, step-by-step approach where each phase is completed before moving to the next."
+  },
+  {
+    "id": "c130",
+    "section": "Section 2: Technology Infrastructure and Security",
+    "unit": "Unit 2.4: Software Development",
+    "term": "Agile",
+    "definition": "is a flexible, iterative method that allows teams to adapt quickly to changes and customer feedback."
+  },
+  {
+    "id": "c131",
+    "section": "Section 2: Technology Infrastructure and Security",
+    "unit": "Unit 2.4: Software Development",
+    "term": "DevOps",
+    "definition": "is a methodology that integrates software development and IT operations to enhance collaboration, automation, and continuous delivery."
+  },
+  {
+    "id": "c132",
+    "section": "Section 2: Technology Infrastructure and Security",
+    "unit": "Unit 2.4: Software Development",
+    "term": "agile methodology",
+    "definition": "a flexible way of developing software that focuses on small, quick improvements instead of doing everything at once"
+  },
+  {
+    "id": "c133",
+    "section": "Section 2: Technology Infrastructure and Security",
+    "unit": "Unit 2.4: Software Development",
+    "term": "DevOps methodology",
+    "definition": "a way for developers and IT teams to work together more closely to create and release software faster"
+  },
+  {
+    "id": "c134",
+    "section": "Section 2: Technology Infrastructure and Security",
+    "unit": "Unit 2.4: Software Development",
+    "term": "off-the-shelf software",
+    "definition": "ready-made software that you can buy or subscribe to, like apps for word processing or organizing photos"
+  },
+  {
+    "id": "c135",
+    "section": "Section 2: Technology Infrastructure and Security",
+    "unit": "Unit 2.4: Software Development",
+    "term": "open-source software",
+    "definition": "software that is free for anyone to use, change, and share; examples include Linux and Mozilla Firefox"
+  },
+  {
+    "id": "c136",
+    "section": "Section 2: Technology Infrastructure and Security",
+    "unit": "Unit 2.4: Software Development",
+    "term": "proprietary software",
+    "definition": "software that is owned by a company, requires payment to use it, and cannot be changed or shared; examples include Microsoft Office and Adobe Photoshop"
+  },
+  {
+    "id": "c137",
+    "section": "Section 2: Technology Infrastructure and Security",
+    "unit": "Unit 2.4: Software Development",
+    "term": "software development",
+    "definition": "the process of creating computer programs and apps that help you do things on a computer"
+  },
+  {
+    "id": "c138",
+    "section": "Section 2: Technology Infrastructure and Security",
+    "unit": "Unit 2.4: Software Development",
+    "term": "waterfall methodology",
+    "definition": "a step-by-step method for developing software, where each stage must be completed before the next one starts"
+  },
+  {
+    "id": "c139",
+    "section": "Section 2: Technology Infrastructure and Security",
+    "unit": "Unit 3.1: Fundamentals of Computer Networking",
+    "term": "Local area networks (LAN)",
+    "definition": "connect computers within a single office or building, while"
+  },
+  {
+    "id": "c140",
+    "section": "Section 2: Technology Infrastructure and Security",
+    "unit": "Unit 3.1: Fundamentals of Computer Networking",
+    "term": "wide-area networks (WAN)",
+    "definition": "span multiple locations, linking businesses and data centers globally."
+  },
+  {
+    "id": "c141",
+    "section": "Section 2: Technology Infrastructure and Security",
+    "unit": "Unit 3.1: Fundamentals of Computer Networking",
+    "term": "Business applications",
+    "definition": "Networks enable customer management systems, inventory tracking, and cloud-based tools that improve efficiency."
+  },
+  {
+    "id": "c142",
+    "section": "Section 2: Technology Infrastructure and Security",
+    "unit": "Unit 3.1: Fundamentals of Computer Networking",
+    "term": "Collaboration and communication",
+    "definition": "Employees use networks to exchange emails, participate in video calls, and work on shared documents in real time."
+  },
+  {
+    "id": "c143",
+    "section": "Section 2: Technology Infrastructure and Security",
+    "unit": "Unit 3.1: Fundamentals of Computer Networking",
+    "term": "Operational efficiency",
+    "definition": "By connecting databases, cloud platforms, and software applications, networks streamline processes and ensure access to accurate, real-time information."
+  },
+  {
+    "id": "c144",
+    "section": "Section 2: Technology Infrastructure and Security",
+    "unit": "Unit 3.1: Fundamentals of Computer Networking",
+    "term": "Remote access",
+    "definition": "Cloud-based networks provide employees with secure access to company resources from anywhere, supporting flexible and hybrid work environments."
+  },
+  {
+    "id": "c145",
+    "section": "Section 2: Technology Infrastructure and Security",
+    "unit": "Unit 3.1: Fundamentals of Computer Networking",
+    "term": "Router",
+    "definition": "directs data between different networks and provides internet access"
+  },
+  {
+    "id": "c146",
+    "section": "Section 2: Technology Infrastructure and Security",
+    "unit": "Unit 3.1: Fundamentals of Computer Networking",
+    "term": "Switch",
+    "definition": "connects multiple devices within a local network, ensuring fast and efficient data transfer"
+  },
+  {
+    "id": "c147",
+    "section": "Section 2: Technology Infrastructure and Security",
+    "unit": "Unit 3.1: Fundamentals of Computer Networking",
+    "term": "Modem",
+    "definition": "converts digital data into signals for internet access, enabling communication with an internet service provider (ISP)"
+  },
+  {
+    "id": "c148",
+    "section": "Section 2: Technology Infrastructure and Security",
+    "unit": "Unit 3.1: Fundamentals of Computer Networking",
+    "term": "Network interface card (NIC)",
+    "definition": "a hardware component that allows a computer or device to connect to a network via wired or wireless communication"
+  },
+  {
+    "id": "c149",
+    "section": "Section 2: Technology Infrastructure and Security",
+    "unit": "Unit 3.1: Fundamentals of Computer Networking",
+    "term": "Network topology",
+    "definition": "refers to the physical and logical layout of how different devices are connected within a network. It defines the arrangement and interconnection of devices like computers, routers, and switches to enable data flow between them. The design of the network impacts its performance, scalability, and reliability. There are several network topologies, but the most commonly used are the following:"
+  },
+  {
+    "id": "c150",
+    "section": "Section 2: Technology Infrastructure and Security",
+    "unit": "Unit 3.1: Fundamentals of Computer Networking",
+    "term": "Star topology",
+    "definition": "Devices are connected to a central hub or switch."
+  },
+  {
+    "id": "c151",
+    "section": "Section 2: Technology Infrastructure and Security",
+    "unit": "Unit 3.1: Fundamentals of Computer Networking",
+    "term": "Mesh topology",
+    "definition": "Devices are interconnected, where each device is directly connected to every other device."
+  },
+  {
+    "id": "c152",
+    "section": "Section 2: Technology Infrastructure and Security",
+    "unit": "Unit 3.1: Fundamentals of Computer Networking",
+    "term": "Point-to-point topology",
+    "definition": "This is a direct connection between two devices."
+  },
+  {
+    "id": "c153",
+    "section": "Section 2: Technology Infrastructure and Security",
+    "unit": "Unit 3.1: Fundamentals of Computer Networking",
+    "term": "Bus topology",
+    "definition": "A single backbone cable connects all devices."
+  },
+  {
+    "id": "c154",
+    "section": "Section 2: Technology Infrastructure and Security",
+    "unit": "Unit 3.1: Fundamentals of Computer Networking",
+    "term": "Ring topology",
+    "definition": "Devices are connected in a circular manner, each device linking to two others."
+  },
+  {
+    "id": "c155",
+    "section": "Section 2: Technology Infrastructure and Security",
+    "unit": "Unit 3.1: Fundamentals of Computer Networking",
+    "term": "Tree topology",
+    "definition": "This is a hybrid of star and bus, where groups of star networks are connected in a hierarchical manner."
+  },
+  {
+    "id": "c156",
+    "section": "Section 2: Technology Infrastructure and Security",
+    "unit": "Unit 3.1: Fundamentals of Computer Networking",
+    "term": "cellular network",
+    "definition": "a wireless network used for mobile communication, connecting mobile devices through cell towers"
+  },
+  {
+    "id": "c157",
+    "section": "Section 2: Technology Infrastructure and Security",
+    "unit": "Unit 3.1: Fundamentals of Computer Networking",
+    "term": "local area network (LAN)",
+    "definition": "a network that connects computers and devices within a limited geographic area, such as a building or campus"
+  },
+  {
+    "id": "c158",
+    "section": "Section 2: Technology Infrastructure and Security",
+    "unit": "Unit 3.1: Fundamentals of Computer Networking",
+    "term": "satellite network",
+    "definition": "a type of network that uses satellites to provide internet or communication services, especially in remote areas"
+  },
+  {
+    "id": "c159",
+    "section": "Section 2: Technology Infrastructure and Security",
+    "unit": "Unit 3.1: Fundamentals of Computer Networking",
+    "term": "virtual local area network (VLAN)",
+    "definition": "a logical grouping of devices within a LAN, segmented to improve traffic management and security"
+  },
+  {
+    "id": "c160",
+    "section": "Section 2: Technology Infrastructure and Security",
+    "unit": "Unit 3.1: Fundamentals of Computer Networking",
+    "term": "virtual private network (VPN)",
+    "definition": "a secure connection method that allows users to send data securely over public networks, often used to connect remote workers to a company network"
+  },
+  {
+    "id": "c161",
+    "section": "Section 2: Technology Infrastructure and Security",
+    "unit": "Unit 3.1: Fundamentals of Computer Networking",
+    "term": "wide area network (WAN)",
+    "definition": "a network that covers a large geographic area, connecting LANs across cities, countries, or even continents"
+  },
+  {
+    "id": "c162",
+    "section": "Section 2: Technology Infrastructure and Security",
+    "unit": "Unit 3.2: Networks and Communication",
+    "term": "Transmission media",
+    "definition": "refers to the physical or logical pathways through which data travels within a network. It is categorized into two primary types: wired communication and wireless communication."
+  },
+  {
+    "id": "c163",
+    "section": "Section 2: Technology Infrastructure and Security",
+    "unit": "Unit 3.2: Networks and Communication",
+    "term": "Wired communication",
+    "definition": "relies on physical cables, such as coaxial cables, fiber-optic cables, and twisted-pair wires, to transmit data. This method is known for providing high-speed and reliable connections with minimal interference. However, it requires extensive infrastructure and lacks flexibility, making mobility more challenging."
+  },
+  {
+    "id": "c164",
+    "section": "Section 2: Technology Infrastructure and Security",
+    "unit": "Unit 3.2: Networks and Communication",
+    "term": "internet",
+    "definition": "is a global network of interconnected computers and devices that communicate with each other using standardized protocols. One key concept for understanding how data travels through the internet is the"
+  },
+  {
+    "id": "c165",
+    "section": "Section 2: Technology Infrastructure and Security",
+    "unit": "Unit 3.2: Networks and Communication",
+    "term": "transmission control protocol (TCP)/internet protocol (IP)",
+    "definition": "model, which helps standardize how different devices communicate. Another essential concept is the"
+  },
+  {
+    "id": "c166",
+    "section": "Section 2: Technology Infrastructure and Security",
+    "unit": "Unit 3.2: Networks and Communication",
+    "term": "HTTP (hypertext transfer protocol)",
+    "definition": "HTTP is used for transferring web pages and data on the internet. For example, when you access a website, HTTP retrieves and displays the content in your browser."
+  },
+  {
+    "id": "c167",
+    "section": "Section 2: Technology Infrastructure and Security",
+    "unit": "Unit 3.2: Networks and Communication",
+    "term": "SMTP (simple mail transfer protocol)",
+    "definition": "SMTP facilitates the sending of emails between servers. It is used for email delivery from one server to another."
+  },
+  {
+    "id": "c168",
+    "section": "Section 2: Technology Infrastructure and Security",
+    "unit": "Unit 3.2: Networks and Communication",
+    "term": "FTP (file transfer protocol)",
+    "definition": "FTP is used for transferring files between computers over a network. It allows users to upload or download files from servers."
+  },
+  {
+    "id": "c169",
+    "section": "Section 2: Technology Infrastructure and Security",
+    "unit": "Unit 3.2: Networks and Communication",
+    "term": "file transfer protocol (FTP)",
+    "definition": "a standard network protocol used to transfer files from one host to another over a TCP/IP-based network, like the internet"
+  },
+  {
+    "id": "c170",
+    "section": "Section 2: Technology Infrastructure and Security",
+    "unit": "Unit 3.2: Networks and Communication",
+    "term": "hypertext transfer protocol (HTTP)",
+    "definition": "a protocol used for transferring hypertext requests and information on the World Wide Web, enabling communication between web browsers and servers"
+  },
+  {
+    "id": "c171",
+    "section": "Section 2: Technology Infrastructure and Security",
+    "unit": "Unit 3.2: Networks and Communication",
+    "term": "internet protocol (IP)",
+    "definition": "a set of rules for addressing and routing data packets so that they can travel across networks and reach their destination"
+  },
+  {
+    "id": "c172",
+    "section": "Section 2: Technology Infrastructure and Security",
+    "unit": "Unit 3.2: Networks and Communication",
+    "term": "open systems interconnection (OSI) model",
+    "definition": "a conceptual framework that standardizes network communication into seven layers, helping to understand and troubleshoot network processes"
+  },
+  {
+    "id": "c173",
+    "section": "Section 2: Technology Infrastructure and Security",
+    "unit": "Unit 3.2: Networks and Communication",
+    "term": "simple mail transfer protocol (SMTP)",
+    "definition": "a protocol used for sending emails between servers, typically used for sending messages from an email client to a mail server"
+  },
+  {
+    "id": "c174",
+    "section": "Section 2: Technology Infrastructure and Security",
+    "unit": "Unit 3.2: Networks and Communication",
+    "term": "transmission control protocol (TCP)",
+    "definition": "a protocol used to ensure reliable transmission of data over a network by dividing data into packets and ensuring their correct delivery"
+  },
+  {
+    "id": "c175",
+    "section": "Section 2: Technology Infrastructure and Security",
+    "unit": "Unit 3.2: Networks and Communication",
+    "term": "wireless communication",
+    "definition": "a method of data transmission that uses radio waves, microwaves, or infrared signals to send information without physical cables"
+  },
+  {
+    "id": "c176",
+    "section": "Section 2: Technology Infrastructure and Security",
+    "unit": "Unit 3.3: Databases and Data Management",
+    "term": "database management system (DBMS)",
+    "definition": "is a software system designed to store, manage, and organize data in a structured way. It allows users to efficiently access, update, and manage data stored in databases. The main function of a DBMS is to provide a centralized platform for handling large volumes of data and ensuring its integrity and security."
+  },
+  {
+    "id": "c177",
+    "section": "Section 2: Technology Infrastructure and Security",
+    "unit": "Unit 3.3: Databases and Data Management",
+    "term": "Metadata",
+    "definition": "refers to data that describes other data, helping databases maintain structure and context for better data retrieval. By integrating these technologies, databases become more efficient and intelligent, improving overall business operations."
+  },
+  {
+    "id": "c178",
+    "section": "Section 2: Technology Infrastructure and Security",
+    "unit": "Unit 3.3: Databases and Data Management",
+    "term": "Alphanumeric data",
+    "definition": "This consists of numbers, letters, characters, and symbols. It is commonly used in text documents, databases, and programming languages."
+  },
+  {
+    "id": "c179",
+    "section": "Section 2: Technology Infrastructure and Security",
+    "unit": "Unit 3.3: Databases and Data Management",
+    "term": "Audio data",
+    "definition": "This represents sound or audio signals and is frequently used in voice recordings, digital assistants, and music streaming."
+  },
+  {
+    "id": "c180",
+    "section": "Section 2: Technology Infrastructure and Security",
+    "unit": "Unit 3.3: Databases and Data Management",
+    "term": "Image data",
+    "definition": "This comprises visual content such as pictures and graphics and is essential in photography, medical imaging, and facial recognition technology."
+  },
+  {
+    "id": "c181",
+    "section": "Section 2: Technology Infrastructure and Security",
+    "unit": "Unit 3.3: Databases and Data Management",
+    "term": "Video data",
+    "definition": "This represents moving visual content combined with audio. It is widely used in video conferencing, online streaming, and digital marketing."
+  },
+  {
+    "id": "c182",
+    "section": "Section 2: Technology Infrastructure and Security",
+    "unit": "Unit 3.3: Databases and Data Management",
+    "term": "data, information, knowledge, and wisdom (DIKW) hierarchy",
+    "definition": "is used to describe the process of transforming raw data into actionable insights through proper management and analysis."
+  },
+  {
+    "id": "c183",
+    "section": "Section 2: Technology Infrastructure and Security",
+    "unit": "Unit 3.3: Databases and Data Management",
+    "term": "Data tables",
+    "definition": "are organized collections of data, typically consisting of rows and columns. Each row represents a record, and each column represents a specific attribute of that record. Their main function is to structure data in a way that allows for easy retrieval, management, and analysis within a database system."
+  },
+  {
+    "id": "c184",
+    "section": "Section 2: Technology Infrastructure and Security",
+    "unit": "Unit 3.3: Databases and Data Management",
+    "term": "data, information, knowledge, wisdom (DIKW) hierarchy",
+    "definition": "a framework that organizes data into a hierarchical structure, where data is raw facts, information is processed data, knowledge is derived from information, and wisdom is the application of knowledge"
+  },
+  {
+    "id": "c185",
+    "section": "Section 2: Technology Infrastructure and Security",
+    "unit": "Unit 3.3: Databases and Data Management",
+    "term": "relational database model",
+    "definition": "a type of database structure that organizes data into tables linked by relationships, allowing for easy querying and management of related data"
+  },
+  {
+    "id": "c186",
+    "section": "Section 2: Technology Infrastructure and Security",
+    "unit": "Unit 3.4: Cloud Computing",
+    "term": "Public cloud",
+    "definition": "Cloud services are provided over the internet and shared among multiple users. Examples include Amazon Web Services (AWS) and Microsoft Azure."
+  },
+  {
+    "id": "c187",
+    "section": "Section 2: Technology Infrastructure and Security",
+    "unit": "Unit 3.4: Cloud Computing",
+    "term": "Private cloud",
+    "definition": "Resources are dedicated to a single organization, offering enhanced control and security. This model is ideal for businesses handling sensitive data."
+  },
+  {
+    "id": "c188",
+    "section": "Section 2: Technology Infrastructure and Security",
+    "unit": "Unit 3.4: Cloud Computing",
+    "term": "Hybrid cloud",
+    "definition": "A combination of public and private cloud services, allowing organizations to balance flexibility and security. Businesses can store critical data in a private cloud while utilizing the scalability of the public cloud."
+  },
+  {
+    "id": "c189",
+    "section": "Section 2: Technology Infrastructure and Security",
+    "unit": "Unit 3.4: Cloud Computing",
+    "term": "desktop as a service (DaaS)",
+    "definition": "are three other commonly used cloud service models. The following table, \"Cloud Service Models,\" provides a comparison of the different types of cloud service models."
+  },
+  {
+    "id": "c190",
+    "section": "Section 2: Technology Infrastructure and Security",
+    "unit": "Unit 3.4: Cloud Computing",
+    "term": "hybrid cloud computing",
+    "definition": "a combination of public and private cloud computing services, allowing for data and applications to be shared between them"
+  },
+  {
+    "id": "c191",
+    "section": "Section 2: Technology Infrastructure and Security",
+    "unit": "Unit 3.4: Cloud Computing",
+    "term": "infrastructure as a service (IaaS)",
+    "definition": "a cloud computing model where virtualized computing resources, such as servers and storage, are provided over the internet"
+  },
+  {
+    "id": "c192",
+    "section": "Section 2: Technology Infrastructure and Security",
+    "unit": "Unit 3.4: Cloud Computing",
+    "term": "platform as a service (PaaS)",
+    "definition": "a cloud computing model that provides a platform allowing customers to develop, run, and manage applications without managing the underlying infrastructure"
+  },
+  {
+    "id": "c193",
+    "section": "Section 2: Technology Infrastructure and Security",
+    "unit": "Unit 3.4: Cloud Computing",
+    "term": "private cloud computing",
+    "definition": "cloud services hosted within an organization's own data center and available only to the organization's users"
+  },
+  {
+    "id": "c194",
+    "section": "Section 2: Technology Infrastructure and Security",
+    "unit": "Unit 3.4: Cloud Computing",
+    "term": "public cloud computing",
+    "definition": "cloud services provided over the internet that are available to the general public and hosted by third-party vendors"
+  },
+  {
+    "id": "c195",
+    "section": "Section 2: Technology Infrastructure and Security",
+    "unit": "Unit 4.1: Information Security in IT Infrastructure",
+    "term": "confidentiality",
+    "definition": "prevents unauthorized access to sensitive data by ensuring that only authorized individuals can view it"
+  },
+  {
+    "id": "c196",
+    "section": "Section 2: Technology Infrastructure and Security",
+    "unit": "Unit 4.1: Information Security in IT Infrastructure",
+    "term": "integrity",
+    "definition": "maintains data accuracy and reliability by preventing unauthorized modification, deletion, or corruption"
+  },
+  {
+    "id": "c197",
+    "section": "Section 2: Technology Infrastructure and Security",
+    "unit": "Unit 4.1: Information Security in IT Infrastructure",
+    "term": "availability",
+    "definition": "ensures that data and resources are accessible when needed by authorized users, minimizing disruptions"
+  },
+  {
+    "id": "c198",
+    "section": "Section 2: Technology Infrastructure and Security",
+    "unit": "Unit 4.1: Information Security in IT Infrastructure",
+    "term": "CIA triad",
+    "definition": "a foundational concept in information security that consists of three key principles—confidentiality, integrity, and availability—aimed at protecting sensitive data and ensuring its security"
+  },
+  {
+    "id": "c199",
+    "section": "Section 2: Technology Infrastructure and Security",
+    "unit": "Unit 4.2: Strategies to Secure Information",
+    "term": "Authentication",
+    "definition": "is the process of verifying the identity of a user or entity before granting access to a system or resource. This security measure helps prevent unauthorized access, ensuring that only legitimate users interact with sensitive data."
+  },
+  {
+    "id": "c200",
+    "section": "Section 2: Technology Infrastructure and Security",
+    "unit": "Unit 4.2: Strategies to Secure Information",
+    "term": "Access control",
+    "definition": "is a security measure that determines who is allowed to access specific data, systems, or resources within an organization. It helps protect sensitive information by restricting access to authorized individuals and preventing unauthorized users from gaining entry."
+  },
+  {
+    "id": "c201",
+    "section": "Section 2: Technology Infrastructure and Security",
+    "unit": "Unit 4.2: Strategies to Secure Information",
+    "term": "Encryption",
+    "definition": "is a method of converting data into a secret code to protect it from unauthorized access. It involves using algorithms to scramble the original information into an unreadable format, known as ciphertext, which can only be deciphered by someone with the correct decryption key."
+  },
+  {
+    "id": "c202",
+    "section": "Section 2: Technology Infrastructure and Security",
+    "unit": "Unit 4.2: Strategies to Secure Information",
+    "term": "backup",
+    "definition": "is a copy of data that is created and stored separately from the original data to protect against data loss or corruption. It is used as a safety measure to ensure that important information can be recovered in case of accidental deletion, hardware failure, cyberattacks, or other disasters."
+  },
+  {
+    "id": "c203",
+    "section": "Section 2: Technology Infrastructure and Security",
+    "unit": "Unit 4.2: Strategies to Secure Information",
+    "term": "Hot site",
+    "definition": "A hot site is a fully operational backup facility that is equipped with all necessary hardware, software, and data to quickly resume operations in case of a disaster. It is the most expensive type of backup solution but offers the fastest recovery time."
+  },
+  {
+    "id": "c204",
+    "section": "Section 2: Technology Infrastructure and Security",
+    "unit": "Unit 4.2: Strategies to Secure Information",
+    "term": "Warm site",
+    "definition": "A warm site is a backup facility that is partially equipped with hardware and software but may require additional setup and configuration before it can be fully operational. It is less expensive than a hot site but offers a faster recovery time compared to a cold site."
+  },
+  {
+    "id": "c205",
+    "section": "Section 2: Technology Infrastructure and Security",
+    "unit": "Unit 4.2: Strategies to Secure Information",
+    "term": "Cold site",
+    "definition": "A cold site is a backup facility that only provides the physical space and basic infrastructure for data recovery. It lacks the necessary hardware, software, and data, which need to be set up and installed before operations can resume. It is the least expensive type of backup solution but has the longest recovery time."
+  },
+  {
+    "id": "c206",
+    "section": "Section 2: Technology Infrastructure and Security",
+    "unit": "Unit 4.2: Strategies to Secure Information",
+    "term": "firewall",
+    "definition": "is a network security device that monitors and controls incoming and outgoing network traffic based on predetermined security rules. It acts as a barrier between a trusted internal network and untrusted external networks, such as the internet, to prevent unauthorized access and protect against cyber threats."
+  },
+  {
+    "id": "c207",
+    "section": "Section 2: Technology Infrastructure and Security",
+    "unit": "Unit 4.2: Strategies to Secure Information",
+    "term": "Data analysis",
+    "definition": "means looking at large amounts of information to see common patterns and notice when something is different."
+  },
+  {
+    "id": "c208",
+    "section": "Section 2: Technology Infrastructure and Security",
+    "unit": "Unit 4.2: Strategies to Secure Information",
+    "term": "backups",
+    "definition": "copies of data stored in a separate location"
+  },
+  {
+    "id": "c209",
+    "section": "Section 2: Technology Infrastructure and Security",
+    "unit": "Unit 4.2: Strategies to Secure Information",
+    "term": "physical security",
+    "definition": "the measures taken to protect physical assets, like computers, servers, and buildings"
+  },
+  {
+    "id": "c210",
+    "section": "Section 2: Technology Infrastructure and Security",
+    "unit": "Unit 4.3: Cybersecurity Principles and Practices",
+    "term": "FISMA (Federal Information Security Modernization Act)",
+    "definition": "applies to U.S. federal agencies and requires them to implement security controls to protect government data."
+  },
+  {
+    "id": "c211",
+    "section": "Section 2: Technology Infrastructure and Security",
+    "unit": "Unit 4.3: Cybersecurity Principles and Practices",
+    "term": "HIPAA (Health Insurance Portability and Accountability Act)",
+    "definition": "sets standards for protecting patient health information."
+  },
+  {
+    "id": "c212",
+    "section": "Section 2: Technology Infrastructure and Security",
+    "unit": "Unit 4.3: Cybersecurity Principles and Practices",
+    "term": "SOX (Sarbanes–Oxley Act)",
+    "definition": "focuses on financial reporting and data security for publicly traded companies."
+  },
+  {
+    "id": "c213",
+    "section": "Section 2: Technology Infrastructure and Security",
+    "unit": "Unit 4.3: Cybersecurity Principles and Practices",
+    "term": "FERPA (Family Educational Rights and Privacy Act)",
+    "definition": "protects the privacy of student education records. The SEC Cybersecurity rule outlines cybersecurity requirements for publicly traded companies."
+  },
+  {
+    "id": "c214",
+    "section": "Section 2: Technology Infrastructure and Security",
+    "unit": "Unit 4.3: Cybersecurity Principles and Practices",
+    "term": "GDPR (General Data Protection Regulation)",
+    "definition": "is a European Union law that sets strict rules for handling personal data. These laws ensure that organizations take data protection seriously and face consequences if they fail to comply."
+  },
+  {
+    "id": "c215",
+    "section": "Section 2: Technology Infrastructure and Security",
+    "unit": "Unit 4.3: Cybersecurity Principles and Practices",
+    "term": "PCI DSS (Payment Card Industry Data Security Standard)",
+    "definition": "is a prime example. It is a set of security requirements designed to protect credit card data. Any business that processes, stores, or transmits credit card information must comply with PCI DSS. These standards help to build trust with customers and reduce the risk of data breaches."
+  },
+  {
+    "id": "c216",
+    "section": "Section 2: Technology Infrastructure and Security",
+    "unit": "Unit 4.3: Cybersecurity Principles and Practices",
+    "term": "assets",
+    "definition": "resources within an organization, such as data, systems, or devices, that need protection from security threats"
+  },
+  {
+    "id": "c217",
+    "section": "Section 2: Technology Infrastructure and Security",
+    "unit": "Unit 4.3: Cybersecurity Principles and Practices",
+    "term": "controls",
+    "definition": "security measures or policies designed to protect assets by preventing, detecting, or responding to threats and vulnerabilities"
+  },
+  {
+    "id": "c218",
+    "section": "Section 2: Technology Infrastructure and Security",
+    "unit": "Unit 4.3: Cybersecurity Principles and Practices",
+    "term": "GRC (Governance, Regulation, and Compliance)",
+    "definition": "a framework that organizations use to align security policies with legal and industry requirements while managing risks effectively"
+  },
+  {
+    "id": "c219",
+    "section": "Section 2: Technology Infrastructure and Security",
+    "unit": "Unit 4.3: Cybersecurity Principles and Practices",
+    "term": "threats",
+    "definition": "potential dangers that could exploit weaknesses in a system, leading to unauthorized access, data breaches, or system disruptions"
+  },
+  {
+    "id": "c220",
+    "section": "Section 2: Technology Infrastructure and Security",
+    "unit": "Unit 4.3: Cybersecurity Principles and Practices",
+    "term": "vulnerabilities",
+    "definition": "weaknesses or flaws in a system, process, or security control that could be exploited by threats"
+  },
+  {
+    "id": "c221",
+    "section": "Section 2: Technology Infrastructure and Security",
+    "unit": "Section 2: Summary",
+    "term": "programming languages",
+    "definition": "coded instructions used to create software and apps"
+  },
+  {
+    "id": "c222",
+    "section": "Section 2: Technology Infrastructure and Security",
+    "unit": "Section 2: Summary",
+    "term": "WAN (wide area network)",
+    "definition": "a network that spans large geographic areas"
+  },
+  {
+    "id": "c223",
+    "section": "Section 3: The Evolving Nature of Technology",
+    "unit": "Section 3: Introduction",
+    "term": "Information Technology",
+    "definition": "Analyze trends and impacts of emerging technologies on the business."
+  },
+  {
+    "id": "c224",
+    "section": "Section 3: The Evolving Nature of Technology",
+    "unit": "Unit 1.1: Artificial Intelligence (AI)",
+    "term": "Large language model (LLM)",
+    "definition": "a type of AI model designed to process and generate humanlike text by learning from large datasets of written language"
+  },
+  {
+    "id": "c225",
+    "section": "Section 3: The Evolving Nature of Technology",
+    "unit": "Unit 1.1: Artificial Intelligence (AI)",
+    "term": "Generative AI (gen AI)",
+    "definition": "AI systems that generate new content, such as text, images, or music, based on patterns learned from existing data"
+  },
+  {
+    "id": "c226",
+    "section": "Section 3: The Evolving Nature of Technology",
+    "unit": "Unit 1.1: Artificial Intelligence (AI)",
+    "term": "AI systems",
+    "definition": "computer systems that use artificial intelligence techniques to perform tasks such as problem-solving, decision-making, and learning from data"
+  },
+  {
+    "id": "c227",
+    "section": "Section 3: The Evolving Nature of Technology",
+    "unit": "Unit 1.1: Artificial Intelligence (AI)",
+    "term": "Human Oversight",
+    "definition": "AI chatbots sometimes misunderstand questions or provide incomplete or incorrect responses. Customer service agents monitor chatbot interactions, review unusual cases, and step in when complex or sensitive issues arise. Humans also check chatbot logs to correct errors, update responses, and ensure the AI continues improving over time."
+  },
+  {
+    "id": "c228",
+    "section": "Section 3: The Evolving Nature of Technology",
+    "unit": "Unit 1.2: Cloud Computing",
+    "term": "Cloud Engineer",
+    "definition": "creates and builds cloud systems to make sure they are efficient and scalable."
+  },
+  {
+    "id": "c229",
+    "section": "Section 3: The Evolving Nature of Technology",
+    "unit": "Unit 1.2: Cloud Computing",
+    "term": "Cloud Architect",
+    "definition": "plans and designs cloud systems that meet business needs and work with existing systems."
+  },
+  {
+    "id": "c230",
+    "section": "Section 3: The Evolving Nature of Technology",
+    "unit": "Unit 1.2: Cloud Computing",
+    "term": "Cloud Administrator",
+    "definition": "manages cloud services, checking performance and availability and making improvements when needed."
+  },
+  {
+    "id": "c231",
+    "section": "Section 3: The Evolving Nature of Technology",
+    "unit": "Unit 1.2: Cloud Computing",
+    "term": "Cloud Security Specialist",
+    "definition": "protects cloud data and systems by setting up security measures and ensuring compliance with rules."
+  },
+  {
+    "id": "c232",
+    "section": "Section 3: The Evolving Nature of Technology",
+    "unit": "Unit 1.2: Cloud Computing",
+    "term": "Amazon Web Services (AWS)",
+    "definition": "Amazon’s cloud platform that offers a wide variety of services, including computing, storage, and databases, and is known for its scalability and pay-as-you-go pricing model"
+  },
+  {
+    "id": "c233",
+    "section": "Section 3: The Evolving Nature of Technology",
+    "unit": "Unit 1.2: Cloud Computing",
+    "term": "Google Cloud Platform (GCP)",
+    "definition": "Google’s cloud platform that specializes in data storage, data analytics, and machine learning, and is often used for big data and AI-driven projects"
+  },
+  {
+    "id": "c234",
+    "section": "Section 3: The Evolving Nature of Technology",
+    "unit": "Unit 1.2: Cloud Computing",
+    "term": "Microsoft Azure",
+    "definition": "Microsoft’s cloud platform that provides strong integration with Microsoft products, offering services such as analytics, networking, storage, and computing through its global infrastructure"
+  },
+  {
+    "id": "c235",
+    "section": "Section 3: The Evolving Nature of Technology",
+    "unit": "Unit 1.3: Internet of Things (IoT)",
+    "term": "Internet of Things (IoT)",
+    "definition": "refers to the network of physical devices, vehicles, appliances, and other objects embedded with sensors, software, and connectivity, enabling them to collect and exchange data."
+  },
+  {
+    "id": "c236",
+    "section": "Section 3: The Evolving Nature of Technology",
+    "unit": "Unit 1.3: Internet of Things (IoT)",
+    "term": "Sensors",
+    "definition": "are key components that detect and measure physical variables such as temperature, motion, or pressure, allowing devices to capture real-time data."
+  },
+  {
+    "id": "c237",
+    "section": "Section 3: The Evolving Nature of Technology",
+    "unit": "Unit 1.3: Internet of Things (IoT)",
+    "term": "5G",
+    "definition": "the fifth generation of wireless technology, providing faster speeds, lower latency, and the ability to connect more devices simultaneously"
+  },
+  {
+    "id": "c238",
+    "section": "Section 3: The Evolving Nature of Technology",
+    "unit": "Unit 1.3: Internet of Things (IoT)",
+    "term": "wearables",
+    "definition": "technology devices worn on the body that track health, fitness, or other personal data; typically connected to the internet"
+  },
+  {
+    "id": "c239",
+    "section": "Section 3: The Evolving Nature of Technology",
+    "unit": "Unit 1.4: Blockchain Technology",
+    "term": "Blockchain",
+    "definition": "a digital record system that keeps track of transactions in a secure and transparent way across multiple computers"
+  },
+  {
+    "id": "c240",
+    "section": "Section 3: The Evolving Nature of Technology",
+    "unit": "Unit 1.4: Blockchain Technology",
+    "term": "Block",
+    "definition": "a record of transactions that links to the previous block, forming a chain of blocks that makes up the blockchain"
+  },
+  {
+    "id": "c241",
+    "section": "Section 3: The Evolving Nature of Technology",
+    "unit": "Unit 1.4: Blockchain Technology",
+    "term": "blocks",
+    "definition": "data units in a blockchain that store transactional records and are linked together to form a chain, ensuring security and immutability"
+  },
+  {
+    "id": "c242",
+    "section": "Section 3: The Evolving Nature of Technology",
+    "unit": "Unit 1.4: Blockchain Technology",
+    "term": "supply chain tracking",
+    "definition": "the process of monitoring the movement and status of products through the various stages of the supply chain using technologies like blockchain for greater transparency and security"
+  },
+  {
+    "id": "c243",
+    "section": "Section 3: The Evolving Nature of Technology",
+    "unit": "Unit 1.5: Ethical Considerations with Emerging Technologies",
+    "term": "Information Systems Audit and Control Association (ISACA)",
+    "definition": "is a global organization that supports IT professionals by guiding best practices, ethical standards, and certifications, ensuring the responsible use of technology in business environments. The following infographic highlights the elements of the Code of Professional Ethics for IT professionals."
+  },
+  {
+    "id": "c244",
+    "section": "Section 3: The Evolving Nature of Technology",
+    "unit": "Unit 1.5: Ethical Considerations with Emerging Technologies",
+    "term": "ISACA",
+    "definition": "a global professional association providing guidance, standards, and certifications for IT governance, risk management, cybersecurity, and other key aspects of IT"
+  },
+  {
+    "id": "c245",
+    "section": "Section 3: The Evolving Nature of Technology",
+    "unit": "Unit 2.1: Strategies to Keep Current",
+    "term": "continuous learning",
+    "definition": "through training programs, certifications like CompTIA, Microsoft, and Cisco, or pursuing formal education such as WGU MS degrees. Joining"
+  },
+  {
+    "id": "c246",
+    "section": "Section 3: The Evolving Nature of Technology",
+    "unit": "Unit 2.1: Strategies to Keep Current",
+    "term": "professional networks",
+    "definition": "and participating in WGU IT clubs, like Women in Tech, can also provide great opportunities to learn and grow. By seeking out these resources and chances, you can improve your skills and knowledge in the fast-changing tech world."
+  },
+  {
+    "id": "c247",
+    "section": "Section 3: The Evolving Nature of Technology",
+    "unit": "Unit 2.1: Strategies to Keep Current",
+    "term": "growth mindset",
+    "definition": "refers to the belief that abilities and intelligence can be developed through dedication and hard work, while a"
+  },
+  {
+    "id": "c248",
+    "section": "Section 3: The Evolving Nature of Technology",
+    "unit": "Unit 2.1: Strategies to Keep Current",
+    "term": "fixed mindset",
+    "definition": "assumes that abilities are innate and unchangeable. Social-emotional learning (SEL) emphasizes the importance of self-awareness, positive affirmations, and receiving constructive feedback to develop emotional intelligence and promote personal growth."
+  },
+  {
+    "id": "c249",
+    "section": "Section 3: The Evolving Nature of Technology",
+    "unit": "Unit 2.1: Strategies to Keep Current",
+    "term": "professional network",
+    "definition": "a web of connections with individuals who can provide mutual support and opportunities"
+  },
+  {
+    "id": "c250",
+    "section": "Section 3: The Evolving Nature of Technology",
+    "unit": "Unit 2.2: Research Resources for Your Performance Assessment",
+    "term": "Gartner Group",
+    "definition": "a leading research and advisory company that provides insights, advice, and tools for business leaders, including research reports and data to assist in technology decision-making"
+  },
+  {
+    "id": "c251",
+    "section": "Section 3: The Evolving Nature of Technology",
+    "unit": "Section 3: Summary",
+    "term": "Amazon Web Services",
+    "definition": "a comprehensive cloud platform offering a variety of cloud services, including computing, storage, and databases, to support businesses in scaling and operating their IT infrastructure"
+  },
+  {
+    "id": "c252",
+    "section": "Section 3: The Evolving Nature of Technology",
+    "unit": "Section 3: Summary",
+    "term": "Google Cloud Platform",
+    "definition": "a suite of cloud computing services offered by Google, including computing, data storage, data analytics, and machine learning tools, aimed at providing businesses with robust infrastructure for development and operations"
+  }
+];
+    let customConcepts = JSON.parse(localStorage.getItem("it-practice-custom-concepts") || "[]");
+    let stats = JSON.parse(localStorage.getItem("it-practice-stats") || '{"attempted":[],"correct":[],"sessions":[]}');
+    let view="dashboard", section="All sections", unit="All units", batchSize=30, feedbackMode="immediate", session=[], currentIndex=0, answers={}, revealed={};
+    const app=document.getElementById("app"), esc=s=>String(s).replace(/[&<>"']/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"}[m]));
+    const concepts=()=>[...builtInConcepts,...customConcepts];
+    const hash=s=>{let r=2166136261;for(let i=0;i<s.length;i++){r^=s.charCodeAt(i);r=Math.imul(r,16777619)}return r>>>0};
+    const shuffle=(a,seed)=>{a=[...a];let st=seed||1;for(let i=a.length-1;i>0;i--){st=(Math.imul(st,1664525)+1013904223)>>>0;let j=st%(i+1);[a[i],a[j]]=[a[j],a[i]]}return a};
+    const templates=[c=>`Which IT term best matches this description? ${c.definition}`,c=>`Which description most accurately explains ${c.term}?`,c=>`A colleague describes “${c.definition}.” Which course concept are they referring to?`,c=>`Choose the statement that best defines ${c.term}.`,c=>`In an IT discussion, which term should be used for this idea: ${c.definition}?`,c=>`Which explanation would be most accurate if someone asked about ${c.term}?`];
+    function questions(){const all=concepts();return all.flatMap(c=>templates.map((template,v)=>{const termAnswer=v%2===0,sameUnit=all.filter(x=>x.id!==c.id&&x.unit===c.unit),sameSection=all.filter(x=>x.id!==c.id&&x.section===c.section),pool=sameUnit.length>=3?sameUnit:sameSection.length>=3?sameSection:all.filter(x=>x.id!==c.id),ds=shuffle(pool,hash(c.id+v)).slice(0,3),answer=termAnswer?c.term:c.definition,options=shuffle([answer,...ds.map(x=>termAnswer?x.term:x.definition)],hash(c.id+v+"o"));return{id:`${c.id}-q${v+1}`,conceptId:c.id,section:c.section,unit:c.unit,prompt:template(c),options,answer,skill:v<2?"Recall":"Application",explanation:`${c.term} is the best answer because it means ${c.definition}.`}}))}
+    function filtered(){return questions().filter(q=>(section==="All sections"||q.section===section)&&(unit==="All units"||q.unit===unit))}
+    function setView(next){view=next;document.querySelectorAll("[data-view]").forEach(b=>b.classList.toggle("active",b.dataset.view===next));render()}
+    document.querySelectorAll("[data-view]").forEach(b=>b.onclick=()=>setView(b.dataset.view));
+    function render(){document.getElementById("bankCount").textContent=`● ${questions().length.toLocaleString()} questions ready`;if(view==="dashboard")renderDashboard();if(view==="practice")renderPractice();if(view==="coverage")renderCoverage();if(view==="library")renderLibrary();if(view==="results")renderResults()}
+    function renderDashboard(){const all=concepts(),sections=["All sections",...new Set(all.map(c=>c.section))],unitList=["All units",...new Set(all.filter(c=>section==="All sections"||c.section===section).map(c=>c.unit))],acc=stats.attempted.length?Math.round(stats.correct.length/stats.attempted.length*100):0,groups=[...new Set(all.map(c=>c.section))];app.innerHTML=`<div class="page grid"><section class="card hero"><div class="eyebrow">Course-ready practice</div><h1>Know the material.<br>Not just the answers.</h1><p>Build a focused session from the complete course, get clear explanations, and see exactly which WGU section every question covers.</p><div class="stats"><div><strong>${questions().length.toLocaleString()}</strong><span>original questions</span></div><div><strong>${all.length}</strong><span>course concepts</span></div><div><strong>53</strong><span>pages reviewed</span></div></div></section><section class="card setup"><div class="heading"><span class="badge">01</span><h2>Build a practice set</h2></div><p class="sub">Choose a focus, then work through one manageable batch.</p><label>Course section<select id="section">${sections.map(x=>`<option ${x===section?"selected":""}>${esc(x)}</option>`).join("")}</select></label><label>Lesson or unit<select id="unit">${unitList.map(x=>`<option ${x===unit?"selected":""}>${esc(x)}</option>`).join("")}</select></label><div class="split"><label>Questions<select id="size">${[10,20,30,50].map(x=>`<option ${x===batchSize?"selected":""}>${x}</option>`).join("")}</select></label><label>Feedback<select id="mode"><option value="immediate" ${feedbackMode==="immediate"?"selected":""}>After each answer</option><option value="batch" ${feedbackMode==="batch"?"selected":""}>At the end</option></select></label></div><div class="note">${filtered().length.toLocaleString()} available · shuffled every session</div><button class="primary" id="start">Start practice <span>→</span></button></section><section class="card progress"><div class="heading"><span class="badge">02</span><h2>Your progress</h2></div><div class="ring" style="--p:${acc*3.6}deg"><span><strong>${acc}%</strong><small>accuracy</small></span></div><div class="minis"><div><strong>${stats.attempted.length}</strong><span>attempted</span></div><div><strong>${stats.correct.length}</strong><span>correct</span></div><div><strong>${stats.sessions.length}</strong><span>sessions</span></div></div></section><section class="card sections">${groups.map((g,i)=>{let cs=all.filter(c=>c.section===g);return`<button data-section="${esc(g)}"><b>0${i+1}</b><span><strong>${esc(g.replace(/^Section \d+: /,""))}</strong><small>${new Set(cs.map(c=>c.unit)).size} learning pages · ${cs.length*6} questions</small></span></button>`}).join("")}</section></div>`;document.getElementById("section").onchange=e=>{section=e.target.value;unit="All units";renderDashboard()};document.getElementById("unit").onchange=e=>unit=e.target.value;document.getElementById("size").onchange=e=>batchSize=+e.target.value;document.getElementById("mode").onchange=e=>feedbackMode=e.target.value;document.getElementById("start").onclick=start;document.querySelectorAll("[data-section]").forEach(b=>b.onclick=()=>{section=b.dataset.section;unit="All units";renderDashboard()})}
+    function start(){session=shuffle(filtered(),Date.now()).slice(0,batchSize);currentIndex=0;answers={};revealed={};setView("practice")}
+    function choose(option){let q=session[currentIndex];if(feedbackMode==="immediate"&&revealed[q.id])return;answers[q.id]=option;if(feedbackMode==="immediate")revealed[q.id]=true;renderPractice()}
+    function next(){let q=session[currentIndex];if(!answers[q.id])return;if(currentIndex===session.length-1)finish();else{currentIndex++;renderPractice()}}
+    function finish(){let attempted=session.filter(q=>answers[q.id]).map(q=>q.id),correct=session.filter(q=>answers[q.id]===q.answer).map(q=>q.id);stats={attempted:[...new Set([...stats.attempted,...attempted])],correct:[...new Set([...stats.correct,...correct])],sessions:[...stats.sessions,{date:new Date().toISOString(),score:correct.length,total:session.length}].slice(-20)};localStorage.setItem("it-practice-stats",JSON.stringify(stats));setView("results")}
+    function renderPractice(){let q=session[currentIndex],sel=answers[q.id],show=revealed[q.id];app.innerHTML=`<div class="page quiz"><div class="quizbar"><div><button id="exit">← Exit session</button><span>${esc(q.section)}</span></div><strong>${currentIndex+1} / ${session.length}</strong></div><div class="track"><i style="width:${(currentIndex+1)/session.length*100}%"></i></div><section class="card question"><div class="meta"><b>${q.skill}</b><span>${esc(q.unit)}</span></div><h1>${esc(q.prompt)}</h1><div class="options">${q.options.map((o,i)=>`<button class="option ${sel===o?"chosen":""} ${show&&o===q.answer?"correct":""} ${show&&sel===o&&o!==q.answer?"wrong":""}" data-option="${i}"><span>${String.fromCharCode(65+i)}</span><p>${esc(o)}</p></button>`).join("")}</div>${show?`<div class="feedback ${sel===q.answer?"good":"bad"}"><strong>${sel===q.answer?"Correct":"Not quite"}</strong><br>${esc(q.explanation)}</div>`:""}<div class="qfoot"><div class="source">SOURCE<strong>${esc(q.section)} · ${esc(q.unit)}</strong></div><button class="primary" id="next" ${!sel?"disabled":""}>${currentIndex===session.length-1?"Finish session":"Next question"} →</button></div></section><div class="jump">${session.map((x,i)=>`<button data-jump="${i}" class="${answers[x.id]?"done":""} ${i===currentIndex?"now":""}">${i+1}</button>`).join("")}</div></div>`;document.getElementById("exit").onclick=()=>setView("dashboard");document.querySelectorAll("[data-option]").forEach(b=>b.onclick=()=>choose(q.options[+b.dataset.option]));document.getElementById("next").onclick=next;document.querySelectorAll("[data-jump]").forEach(b=>b.onclick=()=>{currentIndex=+b.dataset.jump;renderPractice()})}
+    function renderResults(){let score=session.filter(q=>answers[q.id]===q.answer).length,missed=session.filter(q=>answers[q.id]!==q.answer);app.innerHTML=`<div class="page"><section class="card result"><div class="eyebrow">Session complete</div><h1>${score} / ${session.length}</h1><p>${score/session.length>=.8?"Strong work. Keep rotating topics to lock it in.":"Review the misses below, then run another focused batch."}</p><button class="primary" id="again">Practice another batch →</button></section><section class="card review"><h2>Review missed questions</h2>${missed.length?missed.map(q=>`<article><small>${esc(q.unit)}</small><h3>${esc(q.prompt)}</h3><p><b>Correct answer:</b> ${esc(q.answer)}</p><p>${esc(q.explanation)}</p></article>`).join(""):`<div class="empty">Perfect batch—nothing to review.</div>`}</section></div>`;document.getElementById("again").onclick=start}
+    function renderCoverage(){let all=concepts(),groups=[...new Set(all.map(c=>c.section))];app.innerHTML=`<div class="page"><div class="title"><div class="eyebrow">Traceable question bank</div><h1>Course coverage</h1><p>Every concept and question keeps its source section and learning-page label.</p></div><div class="coverage">${groups.map(g=>{let cs=all.filter(c=>c.section===g),us=[...new Set(cs.map(c=>c.unit))];return`<section class="card"><header><h2>${esc(g)}</h2><p>${cs.length} concepts · ${cs.length*6} questions</p></header><div class="units">${us.map(u=>{let uc=cs.filter(c=>c.unit===u),practiced=uc.filter(c=>stats.attempted.some(id=>id.startsWith(c.id+"-"))).length;return`<button class="unit" data-sec="${esc(g)}" data-unit="${esc(u)}"><span><strong>${esc(u)}</strong><small>${uc.length} concepts · ${uc.length*6} questions</small></span><span>${practiced?`${practiced}/${uc.length} practiced`:"Not started"}</span></button>`}).join("")}</div></section>`}).join("")}</div></div>`;document.querySelectorAll(".unit").forEach(b=>b.onclick=()=>{section=b.dataset.sec;unit=b.dataset.unit;setView("dashboard")})}
+    function renderLibrary(){app.innerHTML=`<div class="page"><div class="title"><div class="eyebrow">Reusable for future courses</div><h1>Add your own material</h1><p>Paste structured notes. Each concept creates six questions and stays on this device.</p></div><section class="card import"><h2>Paste concepts</h2><p class="sub" style="margin-left:0">Use one line per concept. The first two fields are required.</p><div class="format"><b>Format:</b> Term | Definition | Section | Unit</div><textarea id="material" placeholder="Cloud elasticity | The ability to increase or reduce resources as demand changes | Cloud Fundamentals | Scaling&#10;Authentication: The process of verifying an identity"></textarea><div class="importfoot"><span id="msg">Your material never leaves this browser.</span><button class="primary" id="add">Add to question bank →</button></div></section></div>`;document.getElementById("add").onclick=()=>{let rows=document.getElementById("material").value.split(/\r?\n/).map(x=>x.trim()).filter(Boolean),added=[];rows.forEach((line,i)=>{let p=line.split("|").map(x=>x.trim()),term="",definition="",s="Imported Course",u="Imported material";if(p.length>=2){[term,definition]=p;s=p[2]||s;u=p[3]||u}else{let c=line.indexOf(":");if(c>0){term=line.slice(0,c).trim();definition=line.slice(c+1).trim()}}if(term&&definition.length>=8)added.push({id:`custom-${Date.now()}-${i}`,term,definition,section:s,unit:u})});if(!added.length){document.getElementById("msg").textContent="Use Term | Definition on each line.";return}customConcepts.push(...added);localStorage.setItem("it-practice-custom-concepts",JSON.stringify(customConcepts));document.getElementById("material").value="";document.getElementById("msg").textContent=`${added.length} concepts added, creating ${added.length*6} new questions.`;document.getElementById("bankCount").textContent=`● ${questions().length.toLocaleString()} questions ready`}}
+    render();
+  </script>
+</body>
+</html>
