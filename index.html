@@ -1782,7 +1782,7 @@
 ];
     let customConcepts = JSON.parse(localStorage.getItem("it-practice-custom-concepts") || "[]");
     let stats = JSON.parse(localStorage.getItem("it-practice-stats") || '{"attempted":[],"correct":[],"sessions":[]}');
-    const SUPABASE_URL="https://pve.tail93304c.ts.net:8443", SUPABASE_KEY="sb_publishable_Zzvo41aseWMf3N4CjxrnyS_18gLB84u";
+    const SUPABASE_URL="https://pve.tail93304c.ts.net:8443", SUPABASE_KEY="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYW5vbiIsImlzcyI6InN1cGFiYXNlIiwiaWF0IjoxNzg2NDIzNDY2LCJleHAiOjE5NDQxMDM0NjZ9.LXP0n_5dxnW9RQ5TvE4smp3TQDxGqFG2L8ACiqBEuv0";
     let cloudSession=JSON.parse(localStorage.getItem("it-practice-cloud-session")||"null"),cloudTimer;
     let view="dashboard", section="All sections", unit="All units", batchSize=30, feedbackMode="immediate", session=[], currentIndex=0, answers={}, revealed={};
     const app=document.getElementById("app"), esc=s=>String(s).replace(/[&<>"']/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"}[m]));
